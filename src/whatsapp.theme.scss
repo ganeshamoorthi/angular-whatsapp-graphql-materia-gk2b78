@@ -1,0 +1,77 @@
+@import '~@angular/material/core/theming/all-theme';
+
+@include mat-core();
+
+$mat-whatsapp-green: (
+  50: #e0eceb,
+  100: #b3d1cc,
+  200: #80b2ab,
+  300: #4d9389,
+  400: #267b6f,
+  500: #006456,
+  600: #005c4f,
+  700: #005245,
+  800: #00483c,
+  900: #00362b,
+  A100: #6effda,
+  A200: #3bffcd,
+  A400: #08ffc0,
+  A700: #00edb0,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: $black-87-opacity,
+  )
+);
+
+$mat-whatsapp-light-green: (
+  50: #e0f2ef,
+  100: #b3ddd7,
+  200: #80c7bd,
+  300: #4db1a2,
+  400: #26a08e,
+  500: #008f7a,
+  600: #008772,
+  700: #007c67,
+  800: #00725d,
+  900: #00604a,
+  A100: #90ffe1,
+  A200: #5dffd3,
+  A400: #2affc5,
+  A700: #11ffbe,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: $black-87-opacity,
+    600: $black-87-opacity,
+    700: $black-87-opacity,
+    800: $black-87-opacity,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: $black-87-opacity,
+  )
+);
+
+$whatsapp-primary: mat-palette($mat-whatsapp-green);
+$whatsapp-accent:  mat-palette($mat-whatsapp-light-green, A200, A100, A400);
+$whatsapp-warn:    mat-palette($mat-whatsapp-light-green);
+
+$whatsapp-theme: mat-light-theme($whatsapp-primary, $whatsapp-accent, $whatsapp-warn);
+
+@include angular-material-theme($whatsapp-theme);
